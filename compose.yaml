@@ -1,0 +1,19 @@
+services:
+  knowledge-brain:
+    build: ./task-1-knowledge-brain
+    ports:
+      - "8000:8000"
+  inbox-agent:
+    build: ./task-2-inbox-agent
+    environment:
+      KNOWLEDGE_API_URL: http://knowledge-brain:8000
+    depends_on:
+      - knowledge-brain
+  meeting-to-sow:
+    build: ./task-3-meeting-to-sow
+    ports:
+      - "8001:8001"
+    environment:
+      KNOWLEDGE_API_URL: http://knowledge-brain:8000
+    depends_on:
+      - knowledge-brain
