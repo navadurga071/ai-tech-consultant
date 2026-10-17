@@ -1,0 +1,9 @@
+{
+  "name": "task-2-inbox-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "tsx src/index.ts", "test": "vitest run", "typecheck": "tsc --noEmit" },
+  "dependencies": {},
+  "devDependencies": { "tsx": "^4.20.0", "typescript": "^5.8.0", "vitest": "^3.2.0", "@types/node": "^22.0.0" }
+}
